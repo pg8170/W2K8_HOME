@@ -1,5 +1,9 @@
 class ServersController < ApplicationController
 
+def home
+
+end
+
 def index
 @servers = Server.all
 end

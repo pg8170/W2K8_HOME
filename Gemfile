@@ -12,6 +12,8 @@ gem "wice_grid", '3.6.0.pre4'
 gem 'font-awesome-sass',  '~> 4.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+#Use chartkick gem for charting
+gem 'chartkick'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes

@@ -1,0 +1,3 @@
+<h1 align="center">W2K8 Progress Graph for admins</h1>
+
+<%=pie_chart Graphpendingadmin.group(:admin).sum(:notcompleted) %>
