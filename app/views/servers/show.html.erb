@@ -1,0 +1,39 @@
+<h1 align="center">Details of Server <%=@server.hostname%> </h1>
+</br>
+
+<table class="table table-bordered">
+  <thead class="thead-inverse">
+    <tr>
+      <th>HostName</th>
+      <th>BNS</th>
+      <th>Manufactured Date</th>
+      <th>Maintenance Days Left</th>
+      <th>Age</th>
+      <th>Region</th>
+      <th>VM/Physical</th>
+      <th>ApplicationName</th>
+      <th>MigrationDate</th>
+      <th>Status</th>
+      <th>Delay Reason</th>
+      <th>Admin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%=@server.hostname%></td>
+      <td><%=@server.bns%></td>
+      <td><%=@server.manufactured_date%></td>
+      <td><%=@server.maintenance_days_left%></td>
+      <td><%=@server.age%></td>
+      <td><%=@server.region%></td>
+      <td><%=@server.vm_physical%></td>
+      <td><%=@server.applicationname%></td> 
+      <td><%=@server.migrationdate%></td> 
+      <td><%=@server.status%></td>  
+      <td><%=@server.delayreason%></td>  
+      <td><%=@server.admin%></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to "Back to details", servers_path,class: "btn btn-xs btn-success" %>

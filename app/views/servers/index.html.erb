@@ -1,0 +1,35 @@
+<h1 align="center">Windows Server 2008 Migration Details</h1>
+
+<div class="input-group"> <span class="input-group-addon">Filter</span>
+    <input id="filter" type="text" class="form-control" placeholder="Type here...">
+</div>
+</br>
+<table class=" table table-bordered" data-sort-name="name" data-sort-order="desc">
+    <thead>
+        <tr>
+            <th>HostName</th>
+            <th>Admin</th>            
+            <th>MigrationDate</th>
+            <th>Application Name</th>
+            <th>Delay Reason</th>
+            <th>Status</th>            
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody class="searchable">
+     <% @servers.each do |server| %> 
+
+      <tr>
+      <td><%=server.hostname%></td>
+      <td><%=server.admin%></td>  
+      <td><%=server.migrationdate%></td> 
+      <td><%=server.applicationname%></td> 
+      <td><%=server.delayreason%></td> 
+      <td><%=server.status%></td> 
+      <td><%= link_to "Show", server_path(server),class: "btn btn-xs btn-success" %> | <%= link_to "Edit ",edit_server_path(server),class: "btn btn-xs btn-info" %> | <%= link_to "Delete",server_path(server), method: :delete,data: {confirm: "Are you sure you want to delete the server records?"},
+                class: "btn btn-xs btn-danger" %> 
+      </td> 
+ </tr>
+  <%end%>      
+ </tbody>
+</table>
